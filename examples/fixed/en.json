@@ -1,0 +1,15 @@
+{
+  "inbox": {
+    "greeting": "Hello, {name}",
+    "unread": "{count, plural, =0 {No unread messages} one {# unread message} other {# unread messages}}"
+  },
+  "checkout": {
+    "total": "Total: {amount, number, ::currency/USD}",
+    "due": "Due {date, date, medium}",
+    "note": "Note: {amount, number}",
+    "terms": "I agree to the <link>Terms</link>."
+  },
+  "cart": {
+    "items": "{count, plural, one {# item} other {# items}}"
+  }
+}

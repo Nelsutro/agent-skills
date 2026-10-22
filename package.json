@@ -1,0 +1,15 @@
+{
+  "name": "agent-skills",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Community skills for coding agents: web-i18n and saas-authz",
+  "scripts": {
+    "test": "node examples/test.mjs && node examples/authz/test.mjs",
+    "test:i18n": "node examples/test.mjs",
+    "test:authz": "node examples/authz/test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

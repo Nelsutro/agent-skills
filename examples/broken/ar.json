@@ -1,0 +1,15 @@
+{
+  "inbox": {
+    "greeting": "مرحباً، {name}",
+    "unread": "{count, plural, =0 {لا توجد رسائل غير مقروءة} one {رسالة غير مقروءة واحدة} two {رسالتان غير مقروءتين} few {# رسائل غير مقروءة} many {# رسالة غير مقروءة} other {# رسالة غير مقروءة}}"
+  },
+  "checkout": {
+    "total": "الإجمالي: {amount, number, ::currency/USD}",
+    "due": "مستحق في {date, date, medium}",
+    "note": "ملاحظة: {amount, number}",
+    "terms": "أوافق على <link>الشروط</link>."
+  },
+  "cart": {
+    "items": "{count, plural, =0 {لا توجد منتجات} one {منتج واحد} two {منتجان} few {# منتجات} many {# منتجاً} other {# منتج}}"
+  }
+}

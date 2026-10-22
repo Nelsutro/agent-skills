@@ -1,0 +1,12 @@
+{
+  "cart": {
+    "ariaLabel": "Carrito de compra",
+    "title": "Tu carrito",
+    "greeting": "Hola, {name}. Tienes {count, plural, =0 {ningún artículo} one {# artículo} other {# artículos}}.",
+    "clearTitle": "Quitar todos los artículos",
+    "clear": "Vaciar carrito",
+    "couponPlaceholder": "Código de cupón",
+    "total": "Total: {amount, number, ::currency/USD}",
+    "checkout": "Continuar al pago"
+  }
+}
