@@ -1,5 +1,7 @@
 # Agent skills
 
+[![skills.sh](https://skills.sh/b/nelsutro/agent-skills)](https://skills.sh/nelsutro/agent-skills)
+
 Two production-oriented skills for coding agents. Each skill is a folder with a `SKILL.md`, focused references, and runnable checks.
 
 | Skill | Use it for |
@@ -7,19 +9,21 @@ Two production-oriented skills for coding agents. Each skill is a folder with a 
 | [`web-i18n`](skills/web-i18n/SKILL.md) | Internationalizing web apps: ICU messages, plurals, RTL, locale routing, SEO, translation workflow, hardcoded-string and catalog checks. |
 | [`saas-authz`](skills/saas-authz/SKILL.md) | Multi-tenant authorization: tenant isolation, RBAC/ABAC, object-level checks, Postgres RLS, Prisma/Drizzle/Supabase scoping, IDOR prevention. |
 
+Live on skills.sh: [web-i18n](https://skills.sh/nelsutro/agent-skills/web-i18n) · [saas-authz](https://skills.sh/nelsutro/agent-skills/saas-authz)
+
 ## Install
 
 With the [skills CLI](https://skills.sh) (Node 22.20+):
 
 ```bash
-npx skills add Nelsutro/agent-skills --skill web-i18n
-npx skills add Nelsutro/agent-skills --skill saas-authz
+npx skills add nelsutro/agent-skills --skill web-i18n
+npx skills add nelsutro/agent-skills --skill saas-authz
 ```
 
 Install every skill in the repository:
 
 ```bash
-npx skills add Nelsutro/agent-skills
+npx skills add nelsutro/agent-skills
 ```
 
 Or copy a skill directory into your agent's skills folder (for opencode, `~/.agents/skills/`):
@@ -59,7 +63,7 @@ npm test
 
 ```
 web-i18n    20/20 checks passed
-saas-authz  19/19 checks passed
+saas-authz  21/21 checks passed
 ```
 
 ## Repository layout
@@ -88,14 +92,14 @@ skills.sh indexes public GitHub repositories automatically; there is no submissi
 2. Add topics such as `agent-skills`, `claude-skills`, `ai-agents`.
 3. Install one of the skills through the CLI so the install is counted:
    ```bash
-   npx skills add Nelsutro/agent-skills --skill saas-authz
+   npx skills add nelsutro/agent-skills --skill saas-authz
    ```
-4. The skill appears at `https://skills.sh/Nelsutro/agent-skills/<skill>`. Rankings are driven by anonymous install telemetry.
+4. The skill appears at `https://skills.sh/nelsutro/agent-skills/<skill>`. Rankings are driven by anonymous install telemetry.
 
 Badge for the README:
 
 ```md
-[![skills.sh](https://skills.sh/b/Nelsutro/agent-skills)](https://skills.sh/Nelsutro/agent-skills)
+[![skills.sh](https://skills.sh/b/nelsutro/agent-skills)](https://skills.sh/nelsutro/agent-skills)
 ```
 
 ## License
