@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const repo = resolve(here, '..', '..')
-const scripts = join(repo, 'skills', 'saas-authz', 'scripts')
+const scripts = join(repo, 'saas-authz', 'scripts')
 
 let failures = 0
 let checks = 0

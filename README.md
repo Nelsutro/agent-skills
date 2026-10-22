@@ -4,11 +4,13 @@
 
 Three production-oriented skills for coding agents. Each skill is a folder with a `SKILL.md`, focused references, and runnable checks.
 
+The repository root is the skills directory. GitHub: [Nelsutro/agent-skills](https://github.com/Nelsutro/agent-skills).
+
 | Skill | Use it for |
 | --- | --- |
-| [`web-i18n`](skills/web-i18n/SKILL.md) | Internationalizing web apps: ICU messages, plurals, RTL, locale routing, SEO, translation workflow, hardcoded-string and catalog checks. |
-| [`saas-authz`](skills/saas-authz/SKILL.md) | Multi-tenant authorization: tenant isolation, RBAC/ABAC, object-level checks, Postgres RLS, Prisma/Drizzle/Supabase scoping, IDOR prevention. |
-| [`web-forms`](skills/web-forms/SKILL.md) | Production forms: server-authoritative validation, shared schemas, accessible errors, pending and idempotent submits, uploads, and schema/form drift checks. |
+| [`web-i18n`](web-i18n/SKILL.md) | Internationalizing web apps: ICU messages, plurals, RTL, locale routing, SEO, translation workflow, hardcoded-string and catalog checks. |
+| [`saas-authz`](saas-authz/SKILL.md) | Multi-tenant authorization: tenant isolation, RBAC/ABAC, object-level checks, Postgres RLS, Prisma/Drizzle/Supabase scoping, IDOR prevention. |
+| [`web-forms`](web-forms/SKILL.md) | Production forms: server-authoritative validation, shared schemas, accessible errors, pending and idempotent submits, uploads, and schema/form drift checks. |
 
 Live on skills.sh: [web-i18n](https://skills.sh/nelsutro/agent-skills/web-i18n) · [saas-authz](https://skills.sh/nelsutro/agent-skills/saas-authz) · [web-forms](https://skills.sh/nelsutro/agent-skills/web-forms)
 
@@ -31,7 +33,7 @@ npx skills add nelsutro/agent-skills
 Or copy a skill directory into your agent's skills folder (for opencode, `~/.agents/skills/`):
 
 ```bash
-cp -r skills/saas-authz ~/.agents/skills/
+cp -r saas-authz ~/.agents/skills/
 ```
 
 Restart the agent after installing so it picks up the new skill.
@@ -52,12 +54,12 @@ The agent loads `SKILL.md` and reads only the references it needs.
 All skills ship scripts that work on any project:
 
 ```bash
-node skills/web-i18n/scripts/scan-hardcoded.mjs src
-node skills/web-i18n/scripts/check-locales.mjs locales --base en
-node skills/saas-authz/scripts/scan-tenant-scope.mjs src
-node skills/saas-authz/scripts/check-rls.mjs db/migrations
-node skills/web-forms/scripts/scan-forms.mjs src
-node skills/web-forms/scripts/check-form-schema.mjs --schema src/schema.ts --form src/CheckoutForm.tsx
+node web-i18n/scripts/scan-hardcoded.mjs src
+node web-i18n/scripts/check-locales.mjs locales --base en
+node saas-authz/scripts/scan-tenant-scope.mjs src
+node saas-authz/scripts/check-rls.mjs db/migrations
+node web-forms/scripts/scan-forms.mjs src
+node web-forms/scripts/check-form-schema.mjs --schema src/schema.ts --form src/CheckoutForm.tsx
 ```
 
 All scripts support `--json`. Scanners and schema checks accept `--fail-on` (or `--fail-on-match`) for CI gating. The repository tests exercise every script against seeded before/after fixtures:
@@ -75,24 +77,23 @@ web-forms   33/33 checks passed
 ## Repository layout
 
 ```
-skills/
-  web-i18n/
-    SKILL.md
-    references/
-    scripts/
-  saas-authz/
-    SKILL.md
-    references/
-    scripts/
-  web-forms/
-    SKILL.md
-    references/
-    scripts/
+web-i18n/
+  SKILL.md
+  references/
+  scripts/
+saas-authz/
+  SKILL.md
+  references/
+  scripts/
+web-forms/
+  SKILL.md
+  references/
+  scripts/
 examples/
   ...fixtures and end-to-end tests
 ```
 
-Skills follow the [Agent Skills](https://skills.sh) convention: a `skills/<name>/SKILL.md` file with YAML frontmatter (`name`, `description`). The directory name matches the skill name.
+Skills follow the [Agent Skills](https://skills.sh) convention: a `<name>/SKILL.md` file with YAML frontmatter (`name`, `description`). The directory name matches the skill name.
 
 ## Publishing and skills.sh
 

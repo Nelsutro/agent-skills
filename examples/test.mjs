@@ -15,7 +15,7 @@ import { fileURLToPath } from 'node:url'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const repo = resolve(here, '..')
-const scripts = join(repo, 'skills', 'web-i18n', 'scripts')
+const scripts = join(repo, 'web-i18n', 'scripts')
 
 let failures = 0
 let checks = 0

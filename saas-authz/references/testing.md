@@ -157,8 +157,8 @@ fc.assert(
 ## CI
 
 ```yaml
-- run: node skills/saas-authz/scripts/scan-tenant-scope.mjs src
-- run: node skills/saas-authz/scripts/check-rls.mjs db/migrations
+- run: node saas-authz/scripts/scan-tenant-scope.mjs src
+- run: node saas-authz/scripts/check-rls.mjs db/migrations
 - run: npm test -- --run authz
 - run: npm run test:integration -- authz
 ```
