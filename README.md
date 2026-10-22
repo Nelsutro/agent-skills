@@ -12,14 +12,14 @@ Two production-oriented skills for coding agents. Each skill is a folder with a 
 With the [skills CLI](https://skills.sh) (Node 22.20+):
 
 ```bash
-npx skills add <owner>/<repo> --skill web-i18n
-npx skills add <owner>/<repo> --skill saas-authz
+npx skills add Nelsutro/agent-skills --skill web-i18n
+npx skills add Nelsutro/agent-skills --skill saas-authz
 ```
 
 Install every skill in the repository:
 
 ```bash
-npx skills add <owner>/<repo>
+npx skills add Nelsutro/agent-skills
 ```
 
 Or copy a skill directory into your agent's skills folder (for opencode, `~/.agents/skills/`):
@@ -88,14 +88,14 @@ skills.sh indexes public GitHub repositories automatically; there is no submissi
 2. Add topics such as `agent-skills`, `claude-skills`, `ai-agents`.
 3. Install one of the skills through the CLI so the install is counted:
    ```bash
-   npx skills add <owner>/<repo> --skill saas-authz
+   npx skills add Nelsutro/agent-skills --skill saas-authz
    ```
-4. The skill appears at `https://skills.sh/<owner>/<repo>/<skill>`. Rankings are driven by anonymous install telemetry.
+4. The skill appears at `https://skills.sh/Nelsutro/agent-skills/<skill>`. Rankings are driven by anonymous install telemetry.
 
 Badge for the README:
 
 ```md
-[![skills.sh](https://skills.sh/b/<owner>/<repo>)](https://skills.sh/<owner>/<repo>)
+[![skills.sh](https://skills.sh/b/Nelsutro/agent-skills)](https://skills.sh/Nelsutro/agent-skills)
 ```
 
 ## License
